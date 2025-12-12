@@ -974,7 +974,6 @@ ul {
     .empaque {
         position: relative;
         z-index: 1;
-        background: rgba(236, 235, 235, 1) !important;
     }
 
     /* Recomendaciones */
@@ -1099,22 +1098,11 @@ ul {
         align-items: center;
     }
 
-    .empaque:nth-child(1) {
-        width: 250px;
-        height: 350px;
-        background: url('img/fondo.png') center center/contain no-repeat;
-    }
-
-    .empaque:nth-child(2) {
-        width: 250px;
-        height: 350px;
-        background: url('img/fondo.png') center center/contain no-repeat;
-    }
-
+    .empaque:nth-child(1),
+    .empaque:nth-child(2),
     .empaque:nth-child(3) {
         width: 250px;
         height: 350px;
-        background: url('img/fondo.png') center center/contain no-repeat;
     }
 
     /* Socios */
@@ -1210,7 +1198,6 @@ ul {
     .empaque {
         width: 220px;
         height: 320px;
-        background: url('img/fondo.png') center center/contain no-repeat;
     }
 
     .texto-calidad h3 {
