@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hielo Saladillo</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <header class="cabecera">
+        <div class="contenedor-navegacion">
+            <img src="img/logo.png" alt="HieloSaladillo" class="logo">
+            <nav class="menu-principal">
+                <ul>
+                    <li><a href="#">Inicio</a></li>
+                    <li><a href="#">Servicios</a></li>
+                    <li><a href="#">Productos</a></li>
+                    <li><a href="#">Descargas</a></li>
+                    <li><a href="#">Fabricación</a></li>
+                    <li><a href="#">Empaquetado</a></li>
+                    <li><a href="#">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="seccion-hero">
+        <div class="contenido-hero">
+            <img src="img/logo.png" alt="Hielo Saladillo" class="titulo">
+            <h1 class="plus">Calidad que conserva <br> lo que importa.</h1>
+            <div class="llamada-accion">
+                <a href="https://www.instagram.com/hielo.saladillo/" class="btn-principal" target="_blank"><i class="fa fa-instagram"
+                        aria-hidden="true"></i> INSTAGRAM</a>
+                <a href="https://wa.me/542345685143" class="btn-secundario" target="_blank"><i class="fa fa-whatsapp"
+                        aria-hidden="true"></i> WHATSAPP</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="seccion-fabrica">
+        <h2 class="titulo-seccion">Producción local de hielo premium para comercios, eventos y consumo diario.</h2>
+        <hr class="divisor-seccion">
+        <div class="imagen-central-producto" style="text-align: center;">
+            <img src="img/2.png" alt="Producto de hielo" class="imagen-clickeable"
+                style="width: 100%; height: auto; border-radius: 15px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); cursor: pointer;"
+                onclick="abrirModal()">
+        </div>
+    </section>
+
+    <section class="seccion-recomendaciones">
+        <div>
+            <h2 class="titulo-seccion ice">El hielo perfecto para cada ocasión</h2>
+        </div>
+        <hr class="divisor-seccion">
+
+        <div class="contenedor-tarjetas">
+            <div class="tarjeta-recomendacion">
+                <div class="imagen-tarjeta-cafe"></div>
+                <h3>Fernet</h3>
+                <p>Ofrecemos cubos sólidos, cristalinos y de larga duración, ideales para el fernet perfecto. Nuestro
+                    hielo mantiene la temperatura, no se derrite rápido y conserva el sabor original de la bebida. Más
+                    frío, más sabor, más disfrute en cada vaso.</p>
+            </div>
+
+            <div class="tarjeta-recomendacion">
+                <div class="imagen-tarjeta-licores"></div>
+                <h3>Cócteles</h3>
+                <p>Hielo Saladillo aporta pureza, brillo y durabilidad para elevar cualquier cóctel. Cubos firmes,
+                    cristalinos y de fusión lenta que enfrían sin aguar la mezcla. El aliado ideal para tragos más
+                    equilibrados, más frescos y con presentación profesional.</p>
+            </div>
+
+            <div class="tarjeta-recomendacion">
+                <div class="imagen-tarjeta-cocteles"></div>
+                <h3>Café</h3>
+                <p>Garantizamos cubos puros y resistentes, ideales para café frío o iced coffee. Mantienen la
+                    temperatura sin alterar el sabor ni la intensidad, logrando una bebida fresca, equilibrada y de
+                    calidad barista.</p>
+            </div>
+
+            <div class="tarjeta-recomendacion">
+                <div class="imagen-tarjeta-jugo"></div>
+                <h3>Jugos Naturales</h3>
+                <p>Hielo Saladillo potencia la frescura de los jugos naturales con cubos puros, cristalinos y de fusión
+                    lenta. Mantienen la temperatura ideal sin diluir el sabor, logrando bebidas más intensas,
+                    equilibradas y refrescantes. Ideal para bares, juguerías y consumo diario.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="seccion-productos">
+        <video autoplay muted loop class="video-fondo">
+            <source src="img/partner.mp4" type="video/mp4">
+        </video>
+        <h2 class="titulo-seccion ices">ENVIOS</h2>
+        <hr class="divisor-seccion">
+
+        <nav class="navegacion-productos">
+            <a href="https://wa.me/542345685143" class="pestana activa" target="_blank">RAMI</a>
+            <a href="https://wa.me/542345521078" class="pestana activa" target="_blank">LAUCHA</a>
+        </nav>
+
+        <img src="img/cartel.png" alt="Cartel" class="cartel-envios cartel-desktop">
+
+        <div class="contenido-producto-destacado">
+
+            <div class="columna-imagen-producto">
+                <div class="imagen-bolsa-hielo"></div>
+            </div>
+        </div>
+    </section>
+
+    <div class="cartel-movil">
+        <img src="img/cartel.png" alt="Cartel" class="cartel-envios">
+    </div>
+
+    <section class="seccion-calidad-agua">
+        <div class="contenido-calidad">
+            <div class="imagen-produccion">
+                <img src="img/calidad.png" alt="Calidad del agua" class="imagen-calidad-movil">
+            </div>
+            <div class="texto-calidad">
+                <p class="etiqueta">CALIDAD</p>
+                <h3>Contamos con equipo de filtrado <br> OSMOSIS INVERSA</h3>
+                <p>La ósmosis inversa es un proceso que sirve para purificar muestras de agua. Se encarga de eliminar
+                    las partículas contaminadas.
+                    Estos filtros tienen un sistema de purificación de agua basado en la presión osmótica. Aplicando
+                    presión, el agua fluye a través de su membrana en sentido inverso al natural, separando así el agua
+                    de calidad del agua con residuos.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="seccion-empaquetado">
+        <h2 class="titulo-seccion">Empaquetado</h2>
+        <hr class="divisor-seccion">
+
+        <div class="contenedor-empaques">
+            <div class="empaque">
+                <img src="img/3kg.png" alt="Empaque 5kg" style="width: 150px; height: auto; margin-bottom: 10px;">
+                <p class="peso-empaque">3 kg</p>
+                <p class="dimensiones-empaque">30 cm x 45 cm <br> Espesor: 80 a 100 micrones</p>
+            </div>
+            <div class="empaque">
+                <img src="img/5kg.png" alt="Empaque 5kg" style="width: 150px; height: auto; margin-bottom: 10px;">
+
+                <p class="peso-empaque">5 kg</p>
+                <p class="dimensiones-empaque">40 cm x 60 cm <br> Espesor: 100 a 120 micrones</p>
+            </div>
+            <div class="empaque">
+                <img src="img/15kg.png" alt="Empaque 5kg" style="width: 150px; height: auto; margin-bottom: 10px;">
+                <p class="peso-empaque">15 kg</p>
+                <p class="dimensiones-empaque">60 cm x 90 cm <br> Espesor: 120 a 150 micrones</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="seccion-socios">
+        <h2 class="titulo-seccion">Nuestros Socios</h2>
+        <hr class="divisor-seccion">
+
+
+        <div class="contenedor-cards">
+            <div class="card card-laucha">
+                <div class="first-content">
+                    <span class="nombre">LAUCHA</span>
+                </div>
+                <div class="second-content">
+                    <span class="textosecundario">Tec Sup <br> Mantenimiento Industrial.<br><br>
+                        REG.servicios⚡️<br><br>
+                        Hielo Saladillo❄️</span>
+                </div>
+            </div>
+
+            <div class="card card-rami">
+                <div class="first-content">
+                    <span class="nombre">RAMI</span>
+                </div>
+                <div class="second-content">
+                    <span class="textosecundario">Tec Sup <br> Mantenimiento Industrial. <br><br>
+                        REG.servicios⚡️ <br><br>
+                        Hielo Saladillo❄️</span>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+
+    </section>
+
+    <section class="seccion-contacto">
+        <h2 class="titulo-seccion">DIRECCION</h2>
+        <hr class="divisor-seccion">
+
+        <div class="informacion-contacto">
+
+            <div class="mapa-ubicacion">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3271.8947368421053!2d-59.77894842525308!3d-35.62342597259259!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95c2a0b0b0b0b0b0%3A0x0!2sReynoso%20%26%20Mitre%2C%20Saladillo%2C%20Provincia%20de%20Buenos%20Aires%2C%20Argentina!5e0!3m2!1ses!2sar!4v1640995200000!5m2!1ses!2sar"
+                    width="100%" height="300" style="border:0; border-radius: 10px;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+        </div>
+    </section>
+
+    <footer class="pie-pagina">
+        <p>© 2025 Facundo Bassi. Todos los derechos reservados.</p>
+    </footer>
+
+    <!-- Modal para video -->
+    <div id="modalVideo" class="modal" onmouseleave="cerrarModal()">
+        <div class="modal-contenido">
+            <span class="cerrar" onclick="cerrarModal()">&times;</span>
+            <video id="videoPropaganda" controls>
+                <source src="img/propaganda.mp4" type="video/mp4">
+                Tu navegador no soporta el elemento video.
+            </video>
+        </div>
+    </div>
+
+    <script>
+        function abrirModal() {
+            const modal = document.getElementById('modalVideo');
+            const video = document.getElementById('videoPropaganda');
+            modal.style.display = 'flex';
+            video.play();
+        }
+
+        function cerrarModal() {
+            const modal = document.getElementById('modalVideo');
+            const video = document.getElementById('videoPropaganda');
+            modal.style.display = 'none';
+            video.pause();
+            video.currentTime = 0;
+        }
+    </script>
+
+</body>
+
+</html>
