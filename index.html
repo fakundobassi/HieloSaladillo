@@ -17,11 +17,9 @@
             <nav class="menu-principal">
                 <ul>
                     <li><a href="#">Inicio</a></li>
-                    <li><a href="#">Servicios</a></li>
+                    <li><a href="#envios">Envios</a></li>
                     <li><a href="#">Productos</a></li>
-                    <li><a href="#">Descargas</a></li>
                     <li><a href="#">Fabricación</a></li>
-                    <li><a href="#">Empaquetado</a></li>
                     <li><a href="#">Contacto</a></li>
                 </ul>
             </nav>
@@ -33,8 +31,8 @@
             <img src="img/logo.png" alt="Hielo Saladillo" class="titulo">
             <h1 class="plus">Calidad que conserva <br> lo que importa.</h1>
             <div class="llamada-accion">
-                <a href="https://www.instagram.com/hielo.saladillo/" class="btn-principal" target="_blank"><i class="fa fa-instagram"
-                        aria-hidden="true"></i> INSTAGRAM</a>
+                <a href="https://www.instagram.com/hielo.saladillo/" class="btn-principal" target="_blank"><i
+                        class="fa fa-instagram" aria-hidden="true"></i> INSTAGRAM</a>
                 <a href="https://wa.me/542345685143" class="btn-secundario" target="_blank"><i class="fa fa-whatsapp"
                         aria-hidden="true"></i> WHATSAPP</a>
             </div>
@@ -45,9 +43,12 @@
         <h2 class="titulo-seccion">Producción local de hielo premium para comercios, eventos y consumo diario.</h2>
         <hr class="divisor-seccion">
         <div class="imagen-central-producto" style="text-align: center;">
-            <img src="img/2.png" alt="Producto de hielo" class="imagen-clickeable"
+            <img id="imagenProducto" src="img/2.png" alt="Producto de hielo" class="imagen-clickeable"
                 style="width: 100%; height: auto; border-radius: 15px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); cursor: pointer;"
                 onclick="abrirModal()">
+            <video id="videoProducto" src="img/propaganda.mp4" autoplay muted loop
+                style="width: 100%; height: auto; border-radius: 15px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); cursor: pointer; display: none;"
+                onclick="abrirModal()"></video>
         </div>
     </section>
 
@@ -92,7 +93,7 @@
         </div>
     </section>
 
-    <section class="seccion-productos">
+    <section id="envios" class="seccion-productos">
         <video autoplay muted loop class="video-fondo">
             <source src="img/partner.mp4" type="video/mp4">
         </video>
@@ -241,6 +242,23 @@
             video.pause();
             video.currentTime = 0;
         }
+
+        // Observador para detectar cuando la imagen esté visible
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    setTimeout(() => {
+                        document.getElementById('imagenProducto').style.display = 'none';
+                        document.getElementById('videoProducto').style.display = 'block';
+                    }, 3000);
+                }
+            });
+        });
+
+        // Iniciar observación cuando cargue la página
+        window.addEventListener('load', () => {
+            observer.observe(document.getElementById('imagenProducto'));
+        });
     </script>
 
 </body>
