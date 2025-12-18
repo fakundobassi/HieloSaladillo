@@ -38,8 +38,17 @@ body {
 }
 
 
+.efecto {
+    animation: rubberBand 2s ease-in-out;
+}
 
+.efectoarriba {
+    animation: animate__slideInDown 2s ease-in-out
+}
 
+.efectoabajo {
+    animation: animate__slideInUp 2s ease-in-out
+}
 
 h1,
 h2,
