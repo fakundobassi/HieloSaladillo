@@ -176,7 +176,7 @@ ul {
 }
 
 .seccion-hero {
-    background: url('img/11.png') center center/contain no-repeat;
+    background: url('img/11.webp') center center/contain no-repeat;
     height: 750px;
     position: relative;
     display: flex;
@@ -296,7 +296,7 @@ ul {
 */
 .seccion-recomendaciones {
     padding: 20px 20px 60px;
-    background: url('img/fondo.png') center center/contain no-repeat;
+    background: url('img/fondo.webp') center center/contain no-repeat;
 }
 
 .contenedor-tarjetas {
@@ -352,26 +352,26 @@ ul {
 }
 
 .imagen-tarjeta-cafe {
-    background-image: url('img/fernet.png');
+    background-image: url('img/fernet.webp');
 }
 
 /* Reemplaza */
 .imagen-tarjeta-licores {
-    background-image: url('img/coctel.png');
+    background-image: url('img/coctel.webp');
 }
 
 /* Reemplaza */
 .imagen-tarjeta-cocteles {
-    background-image: url('img/cafe.png');
+    background-image: url('img/cafe.webp');
 }
 
 .imagen-tarjeta-jugo {
-    background-image: url('img/jugo.png');
+    background-image: url('img/jugo.webp');
 }
 
 /* Reemplaza */
 .imagen-tarjeta-jugo {
-    background-image: url('img/jugo.png');
+    background-image: url('img/jugo.webp');
 }
 
 /* Reemplaza */
@@ -535,7 +535,7 @@ ul {
 .imagen-produccion {
     flex-basis: 90%;
     height: 450px;
-    background: url('img/calidad.png') no-repeat center center/cover;
+    background: url('img/calidad.webp') no-repeat center center/cover;
     background-size: 100% 100%;
 }
 
@@ -624,7 +624,7 @@ ul {
 .seccion-empaquetado {
     padding: 80px 20px;
     text-align: center;
-    background: url('img/fondo.png') center center/contain no-repeat;
+    background: url('img/fondo.webp') center center/contain no-repeat;
 }
 
 .contenedor-empaques {
@@ -859,12 +859,12 @@ ul {
 }
 
 .card-laucha {
-    background-image: url('img/laucha.png');
+    background-image: url('img/laucha.webp');
     box-shadow: 0px 0px 15px 8px rgba(0, 0, 0, 0.4), inset 0px 0px 20px rgba(0, 0, 0, 0.3);
 }
 
 .card-rami {
-    background-image: url('img/rami.png');
+    background-image: url('img/rami.webp');
     box-shadow: 0px 0px 15px 8px rgba(0, 0, 0, 0.4), inset 0px 0px 20px rgba(0, 0, 0, 0.3);
 }
 
@@ -1013,7 +1013,7 @@ ul {
         left: 50%;
         width: 100vh;
         height: 100%;
-        background: url('img/fondo.png') center center/contain no-repeat;
+        background: url('img/fondo.webp') center center/contain no-repeat;
         transform: translateX(-50%) rotate(90deg);
         z-index: -1;
     }
@@ -1036,7 +1036,7 @@ ul {
         left: 50%;
         width: 100vh;
         height: 100%;
-        background: url('img/fondo.png') center center/contain no-repeat;
+        background: url('img/fondo.webp') center center/contain no-repeat;
         transform: translateX(-50%) rotate(90deg);
         z-index: -1;
     }
