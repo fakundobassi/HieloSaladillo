@@ -170,6 +170,10 @@ ul {
     padding-bottom: 60px;
 }
 
+.titulo-seccion.ice {
+    font-size: 30px;
+}
+
 .ices {
     font-family: Nosifer;
     color: #0088cc;
@@ -941,7 +945,7 @@ ul {
     }
 
     .logo {
-        height: 35px;
+        height: 30px;
         margin-bottom: 10px;
     }
 
@@ -992,6 +996,18 @@ ul {
 
     .seccion-hero::after {
         display: none;
+    }
+
+
+    .sobrenosotros {
+        background-color: #006bb3;
+        color: rgb(235, 230, 235);
+    }
+
+    .ice {
+        font-size: 20px !important;
+        margin-bottom: 50px !important;
+        ;
     }
 
     /* Secciones generales */
@@ -1367,5 +1383,37 @@ ul {
 
     100% {
         border-image: linear-gradient(45deg, #feca57, #ff6b6b) 1;
+    }
+}
+
+/* Barra flotante WhatsApp para móviles */
+.barra-whatsapp-movil {
+    display: none;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #0088cc;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    z-index: 1000;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.barra-whatsapp-movil a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.barra-whatsapp-movil i {
+    margin-right: 10px;
+}
+
+@media (max-width: 768px) {
+    .barra-whatsapp-movil {
+        display: block;
     }
 }
