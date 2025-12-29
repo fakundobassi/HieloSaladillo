@@ -15,15 +15,7 @@
     <header class="cabecera">
         <div class="contenedor-navegacion">
             <img src="img/logo.webp" alt="HieloSaladillo" class="logo">
-            <nav class="menu-principal">
-                <ul>
-                    <li><a href="#inicio">Inicio</a></li>
-                    <li><a href="#envios">Envios</a></li>
-                    <li><a href="#productos">Productos</a></li>
-                    <li><a href="#fabricacion">Fabricación</a></li>
-                    <li><a href="#contacto">Contacto</a></li>
-                </ul>
-            </nav>
+
         </div>
     </header>
 
@@ -70,12 +62,10 @@
 
     <section class="seccion-fabrica">
         <hr class="divisor-seccion">
-        <div class="imagen-central-producto" style="text-align: center;">
-            <img id="imagenProducto" src="img/2.webp" alt="Producto de hielo" class="imagen-clickeable"
-                style="width: 100%; height: auto; border-radius: 15px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); cursor: pointer;"
+        <div class="imagen-central-producto">
+            <img id="imagenProducto" src="img/2.webp" alt="Producto de hielo" class="imagen-producto"
                 onclick="abrirModal()">
-            <video id="videoProducto" src="img/propaganda.mp4" autoplay muted loop
-                style="width: 100%; height: auto; border-radius: 15px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); cursor: pointer; display: none;"
+            <video id="videoProducto" src="img/propaganda.mp4" muted loop class="imagen-producto"
                 onclick="abrirModal()"></video>
         </div>
     </section>
@@ -87,7 +77,7 @@
         <hr class="divisor-seccion">
 
         <div class="contenedor-tarjetas">
-            <div class="tarjeta-recomendacion efectoarriba">
+            <div class="tarjeta-recomendacion efectoarriba efecto-vidrio">
                 <div class="imagen-tarjeta-cafe "></div>
                 <h3>Fernet</h3>
                 <p>Ofrecemos cubos sólidos, cristalinos y de larga duración, ideales para el fernet perfecto. Nuestro
@@ -95,7 +85,7 @@
                     frío, más sabor, más disfrute en cada vaso.</p>
             </div>
 
-            <div class="tarjeta-recomendacion efectoabajo">
+            <div class="tarjeta-recomendacion efectoabajo efecto-vidrio">
                 <div class="imagen-tarjeta-licores"></div>
                 <h3>Cócteles</h3>
                 <p>Hielo Saladillo aporta pureza, brillo y durabilidad para elevar cualquier cóctel. Cubos firmes,
@@ -103,7 +93,7 @@
                     equilibrados, más frescos y con presentación profesional.</p>
             </div>
 
-            <div class="tarjeta-recomendacion efectoarriba">
+            <div class="tarjeta-recomendacion efectoarriba efecto-vidrio">
                 <div class="imagen-tarjeta-cocteles"></div>
                 <h3>Café</h3>
                 <p>Garantizamos cubos puros y resistentes, ideales para café frío o iced coffee. Mantienen la
@@ -111,7 +101,7 @@
                     calidad barista.</p>
             </div>
 
-            <div class="tarjeta-recomendacion efectoabajo">
+            <div class="tarjeta-recomendacion efectoabajo efecto-vidrio">
                 <div class="imagen-tarjeta-jugo"></div>
                 <h3>Jugos Naturales</h3>
                 <p>Hielo Saladillo potencia la frescura de los jugos naturales con cubos puros, cristalinos y de fusión
@@ -122,11 +112,14 @@
     </section>
 
     <section id="envios" class="seccion-productos">
-        <video autoplay muted loop class="video-fondo">
-            <source src="img/partner.mp4" type="video/mp4">
-        </video>
-        <h2 class="titulo-seccion ices sobrenosotros">ENVIOS</h2>
-
+        <div class="titulo-envios">
+            <h2 class="titulo-seccion ices sobrenosotros">ENVIOS</h2>
+        </div>
+        <div>
+            <video autoplay muted loop class="video-fondo">
+                <source src="img/partner.mp4" type="video/mp4">
+            </video>
+        </div>
 
 
 
@@ -178,19 +171,19 @@
 
 
         <div class="contenedor-empaques">
-            <div class="empaque">
-                <img src="img/3kg.webp" alt="Empaque 5kg" style="width: 150px; height: auto; margin-bottom: 10px;">
+            <div class="empaque efecto-vidrio">
+                <img src="img/3kg.webp" alt="Empaque 5kg" class="imagen-empaque">
                 <p class="peso-empaque">3 kg</p>
                 <p class="dimensiones-empaque">30 cm x 45 cm <br> Espesor: 80 a 100 micrones</p>
             </div>
-            <div class="empaque">
-                <img src="img/5kg.webp" alt="Empaque 5kg" style="width: 150px; height: auto; margin-bottom: 10px;">
+            <div class="empaque efecto-vidrio">
+                <img src="img/5kg.webp" alt="Empaque 5kg" class="imagen-empaque">
 
                 <p class="peso-empaque">5 kg</p>
                 <p class="dimensiones-empaque">40 cm x 60 cm <br> Espesor: 100 a 120 micrones</p>
             </div>
-            <div class="empaque">
-                <img src="img/15kg.webp" alt="Empaque 5kg" style="width: 150px; height: auto; margin-bottom: 10px;">
+            <div class="empaque efecto-vidrio">
+                <img src="img/15kg.webp" alt="Empaque 5kg" class="imagen-empaque">
                 <p class="peso-empaque">15 kg</p>
                 <p class="dimensiones-empaque">60 cm x 90 cm <br> Espesor: 120 a 150 micrones</p>
             </div>
@@ -294,15 +287,18 @@
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
                     setTimeout(() => {
-                        document.getElementById('imagenProducto').style.display = 'none';
-                        document.getElementById('videoProducto').style.display = 'block';
-                    }, 3000);
+                        const video = document.getElementById('videoProducto');
+                        video.style.zIndex = '1';
+                        video.play();
+                    }, 1300);
                 }
             });
         });
 
         // Iniciar observación cuando cargue la página
         window.addEventListener('load', () => {
+            const video = document.getElementById('videoProducto');
+            video.style.zIndex = '-1';
             observer.observe(document.getElementById('imagenProducto'));
         });
     </script>

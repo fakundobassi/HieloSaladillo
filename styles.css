@@ -38,16 +38,18 @@ body {
 }
 
 
-.efecto {
-    animation: rubberBand 2s ease-in-out;
+.efecto-vidrio {
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1), 0 0 15px rgba(173, 216, 230, 0.8), inset 0 0 10px rgba(255, 255, 255, 0.5);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.efectoarriba {
-    animation: animate__slideInDown 2s ease-in-out
-}
-
-.efectoabajo {
-    animation: animate__slideInUp 2s ease-in-out
+.efecto-vidrio:hover {
+    transform: translateY(-5px) scale(1.02);
+    box-shadow: 0 8px 40px rgba(0, 0, 0, 0.15), 0 0 25px rgba(135, 206, 250, 1), inset 0 0 15px rgba(255, 255, 255, 0.7);
 }
 
 h1,
@@ -254,20 +256,7 @@ ul {
 }
 
 /* Simulación de la imagen de la bolsa de hielo en el hero */
-.seccion-hero::after {
-    content: '';
-    position: absolute;
-    top: -50px;
-    right: 5%;
-    width: 600px;
-    /* Ajusta el tamaño de la imagen de la bolsa */
-    height: 500px;
-    background: url('placeholder_bolsa_hero.png') no-repeat center center/contain;
-    /* Reemplaza con tu imagen */
-    transform: rotate(-10deg);
-    opacity: 0.8;
-    z-index: 1;
-}
+/* Eliminado: placeholder no usado */
 
 /*
   3. FÁBRICA Y IMAGEN CENTRAL
@@ -282,11 +271,19 @@ ul {
     max-width: 700px;
     height: 350px;
     margin: 0 auto 20px;
-    /* Simulación de la imagen del vaso con hielo y limón */
-    background: url('placeholder_vaso_hielo.jpg') no-repeat center center/cover;
-    /* Reemplaza con tu imagen */
-    border-radius: 10px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+.imagen-producto {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
 }
 
 .seccion-fabrica p {
@@ -317,30 +314,10 @@ ul {
     overflow: hidden;
     text-align: center;
     margin-top: 10px;
-
-    /* Efecto "Vidrio Congelado" */
-    background: rgba(255, 255, 255, 0.15);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-
-    /* Borde que parece "escarcha" */
-    border: 1px solid rgba(255, 255, 255, 0.3);
-
-    /* Sombra con brillo frío */
-    box-shadow:
-        0 4px 30px rgba(0, 0, 0, 0.1),
-        0 0 15px rgba(173, 216, 230, 0.8),
-        inset 0 0 10px rgba(255, 255, 255, 0.5);
-
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .tarjeta-recomendacion:hover {
-    transform: translateY(-5px) scale(1.02);
-    box-shadow:
-        0 8px 40px rgba(0, 0, 0, 0.15),
-        0 0 25px rgba(135, 206, 250, 1),
-        inset 0 0 15px rgba(255, 255, 255, 0.7);
+    /* Efectos movidos a .efecto-vidrio */
 }
 
 .imagen-tarjeta-cafe,
@@ -359,12 +336,10 @@ ul {
     background-image: url('img/fernet.webp');
 }
 
-/* Reemplaza */
 .imagen-tarjeta-licores {
     background-image: url('img/coctel.webp');
 }
 
-/* Reemplaza */
 .imagen-tarjeta-cocteles {
     background-image: url('img/cafe.webp');
 }
@@ -372,13 +347,6 @@ ul {
 .imagen-tarjeta-jugo {
     background-image: url('img/jugo.webp');
 }
-
-/* Reemplaza */
-.imagen-tarjeta-jugo {
-    background-image: url('img/jugo.webp');
-}
-
-/* Reemplaza */
 
 .tarjeta-recomendacion h3 {
     margin: 15px 0 5px;
@@ -408,6 +376,13 @@ ul {
     width: auto;
 }
 
+.titulo-envios {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    padding: 20px 0;
+}
+
 .video-fondo {
     position: absolute;
     top: 0;
@@ -418,32 +393,7 @@ ul {
     z-index: -1;
 }
 
-.navegacion-productos {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    margin-bottom: 40px;
-}
-
-.pestana {
-    padding: 10px 20px;
-    color: #999;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    transition: background-color 0.3s, color 0.3s;
-}
-
-.pestana.activa {
-    background-color: #0088cc !important;
-    color: #fff !important;
-    border-color: #0088cc !important;
-}
-
-.navegacion-productos .pestana.activa {
-    background-color: #0088cc !important;
-    color: #fff !important;
-    border: 1px solid #0088cc !important;
-}
+/* Navegación de productos eliminada por no usarse */
 
 .contenido-producto-destacado {
     display: flex;
@@ -515,8 +465,7 @@ ul {
     width: 250px;
     height: 350px;
     /* Simulación de la imagen de la bolsa de hielo pequeña */
-    background: url('placeholder_bolsa_pequena.png') no-repeat center center/contain;
-    /* Reemplaza */
+    /* Reemplaza con tu imagen */
     margin: 0 auto;
 }
 
@@ -645,23 +594,7 @@ ul {
     padding: 30px;
     border-radius: 20px;
     text-align: center;
-
-    /* Efecto "Vidrio Congelado" */
-    background: rgba(255, 255, 255, 0.15);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-
-    /* Borde que parece "escarcha" */
-    border: 1px solid rgba(255, 255, 255, 0.3);
-
-    /* Sombra con brillo frío */
-    box-shadow:
-        0 4px 30px rgba(0, 0, 0, 0.1),
-        0 0 15px rgba(173, 216, 230, 0.8),
-        inset 0 0 10px rgba(255, 255, 255, 0.5);
-
     color: #0d47a1;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -669,11 +602,7 @@ ul {
 }
 
 .empaque:hover {
-    transform: translateY(-5px) scale(1.02);
-    box-shadow:
-        0 8px 40px rgba(0, 0, 0, 0.15),
-        0 0 25px rgba(135, 206, 250, 1),
-        inset 0 0 15px rgba(255, 255, 255, 0.7);
+    /* Efectos movidos a .efecto-vidrio */
 }
 
 .icono-empaque {
@@ -683,6 +612,12 @@ ul {
     /* Icono simulado */
     border-radius: 50%;
     margin: 0 auto 15px;
+}
+
+.imagen-empaque {
+    width: 150px;
+    height: auto;
+    margin-bottom: 10px;
 }
 
 .peso-empaque {
@@ -1002,6 +937,11 @@ ul {
     .sobrenosotros {
         background-color: #006bb3;
         color: rgb(235, 230, 235);
+        font-size: 1.5em !important;
+        font-weight: bold;
+        text-transform: uppercase;
+        padding: 10px;
+        margin: 10px 0;
     }
 
     .ice {
@@ -1245,11 +1185,8 @@ ul {
         z-index: -1;
     }
 
-    .seccion-productos .titulo-seccion,
-    .seccion-productos .divisor-seccion,
-    .seccion-productos .navegacion-productos {
-        position: relative;
-        z-index: 1;
+    .titulo-envios {
+        padding: 10px 0;
     }
 }
 
